@@ -41,8 +41,8 @@ export async function publishStatusCommand(operationId, options) {
     if (result.status === 'InProgress') {
       console.log(chalk.yellow('\n⏳ Publishing is in progress. This may take some time.'));
     } else if (result.status === 'Succeeded') {
-      console.log(chalk.green('\n✅ Extension published successfully!'));
-      console.log(chalk.cyan('Your extension is now live on the Microsoft Edge Add-ons store.'));
+      console.log(chalk.green('\n✅ Submission accepted, waiting for review.'));
+      console.log(chalk.cyan('Your extension submission is waiting for review by the Microsoft Edge Add-ons team.'));
     } else if (result.status === 'Failed') {
       console.log(chalk.red('\n❌ Publishing failed!'));
       process.exit(1);

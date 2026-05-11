@@ -66,9 +66,9 @@ export async function workflowCommand(zipFilePath, options) {
     );
 
     if (publishStatus.status === 'Succeeded') {
-      spinner.succeed(chalk.green('Extension published successfully!'));
+      spinner.succeed(chalk.green('Submission accepted, waiting for review.'));
       console.log(chalk.cyan('\n🎉 Workflow completed!'));
-      console.log(chalk.cyan('Your extension is now live on the Microsoft Edge Add-ons store.'));
+      console.log(chalk.cyan('Your extension submission is waiting for review by the Microsoft Edge Add-ons team.'));
     } else if (publishStatus.status === 'Failed') {
       spinner.fail(chalk.red('Publishing failed!'));
       console.log(chalk.red('Error:'), publishStatus.message);
