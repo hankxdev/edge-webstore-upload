@@ -1,6 +1,6 @@
 {
   "name": "edge-webstore-upload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to upload and publish Microsoft Edge extensions using the Edge Add-ons API v1.1",
   "main": "src/index.js",
   "bin": {
