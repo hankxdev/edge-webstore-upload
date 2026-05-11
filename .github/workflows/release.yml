@@ -15,7 +15,7 @@ jobs:
     outputs:
       released: ${{ steps.release.outputs.release_created }}
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@v6
         id: release
         with:
           config-file: release-please-config.json
@@ -26,11 +26,11 @@ jobs:
     if: needs.release-please.outputs.released == 'true'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           registry-url: https://registry.npmjs.org/
 
       - name: Upgrade npm for trusted publishing
